@@ -1,0 +1,146 @@
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~ (master)
+$ mkdir ra
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~ (master)
+$ cd ra
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (master)
+$ git init
+Initialized empty Git repository in C:/Users/Lenovo/ra/.git/
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (master)
+$ git config --global user.name "MR-BABY-R"
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (master)
+$ git config --global user.email "lsrajesh028@gmail.com"
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (master)
+$ touch 2.txt
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (master)
+$ notepad 2.txt
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (master)
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (master)
+$ notepad 2.txt
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (master)
+$ git add .
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   2.txt
+
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (master)
+$ git commit -m "1st commit"
+[master (root-commit) a63d4e9] 1st commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 2.txt
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (master)
+$ git checkout master
+Already on 'master'
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (master)
+$ git remote add oigin https://github.com/MR-BABY-R/raj.git
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (master)
+$ git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (feature-branch)
+$ git fetch origin
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (feature-branch)
+$ git stash save "usman"
+No local changes to save
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (feature-branch)
+$ git remote -v
+oigin   https://github.com/MR-BABY-R/raj.git (fetch)
+oigin   https://github.com/MR-BABY-R/raj.git (push)
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (feature-branch)
+$ git fetch origin
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (feature-branch)
+$ git remote remove oigin
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (feature-branch)
+$ git remote add origin https://github.com/MR-BABY-R/raj.git
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (feature-branch)
+$ git remote -v
+origin  https://github.com/MR-BABY-R/raj.git (fetch)
+origin  https://github.com/MR-BABY-R/raj.git (push)
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (feature-branch)
+$ git fetch origin
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 109.25 KiB | 799.00 KiB/s, done.
+From https://github.com/MR-BABY-R/raj
+ * [new branch]      main       -> origin/main
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (feature-branch)
+$ git rebase --continue
+fatal: no rebase in progress
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (feature-branch)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/MR-BABY-R/raj.git'
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (feature-branch)
+$ git push origin master
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 219 bytes | 109.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/MR-BABY-R/raj/pull/new/master
+remote:
+To https://github.com/MR-BABY-R/raj.git
+ * [new branch]      master -> master
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (feature-branch)
+$
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (feature-branch)
+$ git pull origin master
+From https://github.com/MR-BABY-R/raj
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (feature-branch)
+$ git push origin master
+Everything up-to-date
+
+Lenovo@DESKTOP-Q2BBVLA MINGW64 ~/ra (feature-branch)
+$
